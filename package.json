@@ -2,6 +2,7 @@
   "name": "wordpress-block-handles-endpoint",
   "version": "0.1.0",
   "description": "WordPress REST endpoint for block handles.",
+  "type": "module",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
