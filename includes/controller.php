@@ -1,16 +1,16 @@
 <?php
 /**
- * REST API: WP_REST_Block_Handles_Controller class
+ * REST API: BTR_REST_Block_Types_Controller class
  *
  * @package WordPress
  */
 
 /**
- * Class used to access block handles via the REST API.
+ * Class used to access block types with resources via the REST API.
  *
  * @see WP_REST_Controller
  */
-class WP_REST_Block_Handles_Controller extends WP_REST_Controller {
+class BTR_REST_Block_Types_Controller extends WP_REST_Controller {
     const NAME_PATTERN = '^[a-z][a-z0-9-]*/[a-z][a-z0-9-]*$';
 
     /**
@@ -31,8 +31,8 @@ class WP_REST_Block_Handles_Controller extends WP_REST_Controller {
      * Constructor.
      */
     public function __construct() {
-        $this->namespace = "wordpress-block-handles-endpoint/v1";
-        $this->rest_base = "block-handles";
+        $this->namespace = "btr/v1";
+        $this->rest_base = "block-types";
         $this->block_registry = WP_Block_Type_Registry::get_instance();
         $this->style_registry = WP_Block_Styles_Registry::get_instance();
     }

@@ -1,7 +1,7 @@
 {
-  "name": "wordpress-block-handles-endpoint",
+  "name": "block-types-with-resources",
   "version": "0.1.0",
-  "description": "WordPress REST endpoint for block handles.",
+  "description": "WordPress REST endpoint for block types including registered style and script paths.",
   "type": "module",
   "main": "index.js",
   "scripts": {
@@ -10,14 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/dcalhoun/wordpress-block-handles-endpoint.git"
+    "url": "git+https://github.com/dcalhoun/block-types-with-resources.git"
   },
   "author": "David Calhoun",
   "license": "GPL-2.0-or-later",
   "bugs": {
-    "url": "https://github.com/dcalhoun/wordpress-block-handles-endpoint/issues"
+    "url": "https://github.com/dcalhoun/block-types-with-resources/issues"
   },
-  "homepage": "https://github.com/dcalhoun/wordpress-block-handles-endpoint#readme",
+  "homepage": "https://github.com/dcalhoun/block-types-with-resources#readme",
   "devDependencies": {
     "@prettier/plugin-php": "^0.22.2",
     "prettier": "^3.3.3"
