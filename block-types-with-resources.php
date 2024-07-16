@@ -15,7 +15,7 @@ function btr_map_block_type_with_resources($response, $block_type, $request) {
             $resource_key = substr($key, 0, -8);
             $resource_paths = [];
             foreach ($value as $handle) {
-                if (isset($wp_styles->registered[$handle])) {
+                if (isset($wp_scripts->registered[$handle])) {
                     $resource_paths[] = $wp_scripts->registered[$handle]->src;
                 }
             }
