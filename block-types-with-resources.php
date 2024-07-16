@@ -120,6 +120,15 @@ function _btr_get_editor_assets() {
                 wp_enqueue_style($style_handle);
             }
         }
+
+        if (
+            isset($block_type->editor_script_handles) &&
+            is_array($block_type->editor_script_handles)
+        ) {
+            foreach ($block_type->editor_script_handles as $script_handle) {
+                wp_enqueue_script($script_handle);
+            }
+        }
     }
 
     /**
