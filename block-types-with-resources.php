@@ -173,5 +173,6 @@ add_action("rest_api_init", function () {
     register_rest_route("btr/v1", "editor-assets", [
         "methods" => "GET",
         "callback" => "btr_get_editor_assets",
+        "permission_callback" => "__return_true",
     ]);
 });
