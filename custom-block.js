@@ -1,15 +1,22 @@
 (function (blocks, element) {
   var el = element.createElement;
 
-  blocks.registerBlockType("var/foo", {
-    title: "Foo",
+  blocks.registerBlockType("custom-block/custom-block", {
+    title: "Custom Block",
     icon: "smiley",
     category: "common",
     edit: function (props) {
-      return el("p", { className: props.className }, "Hello from the editor!");
+      return el(wp.blockEditor.RichText, {
+        tagName: "p",
+        className: `custom-block ${props.className}`,
+        value: props.attributes.content,
+        onChange: function (newContent) {
+          props.setAttributes({ content: newContent });
+        },
+      });
     },
     save: function () {
-      return el("p", {}, "Hello from the saved content!");
+      return el("p", {}, props.attributes.content);
     },
   });
 })(window.wp.blocks, window.wp.element);

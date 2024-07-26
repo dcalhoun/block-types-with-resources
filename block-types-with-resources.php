@@ -187,8 +187,8 @@ add_action("rest_api_init", function () {
 
 function register_custom_block_type() {
     $block_type = [
-        "name" => "foo",
-        "title" => "Foo Block",
+        "name" => "custom",
+        "title" => "Custom Block",
         "editor_script" => "custom-block-script",
         "editor_style" => "custom-block-style",
     ];
