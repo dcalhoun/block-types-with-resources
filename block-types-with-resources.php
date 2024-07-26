@@ -7,6 +7,14 @@ function btr_map_block_type_with_resources($response, $block_type, $request) {
     global $wp_styles;
     global $wp_scripts;
 
+    add_filter("should_load_block_editor_scripts_and_styles", "__return_true");
+    do_action("enqueue_block_assets");
+    do_action("enqueue_block_editor_assets");
+    remove_filter(
+        "should_load_block_editor_scripts_and_styles",
+        "__return_true",
+    );
+
     foreach ($block_type as $key => $value) {
         if (
             strpos($key, "script") !== false &&
